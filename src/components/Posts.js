@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
-
 import SinglePost from "./SinglePost";
 
 const PostBlock = styled.div`
@@ -46,6 +45,7 @@ function Posts() {
       setPosts(response.data);
     } catch (e) {
       setError(e);
+    } finally {
     }
     setLoading(false);
   };

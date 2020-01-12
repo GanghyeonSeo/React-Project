@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Album from "./PostAlbumStyle";
-import PostAlbumWork from "./PostAlbumWork";
+import AlbumSwiper from "./AlbumSwiper";
 import axios from "axios";
 
 const PostAlbumTitle = styled.div`
@@ -12,6 +11,10 @@ const PostAlbumTitle = styled.div`
     font-size: 25px;
     text-align: center;
   }
+`;
+
+const AlbumStyle = styled.div`
+  margin: 0 auto;
 `;
 
 const defaultAlbum = {
@@ -57,9 +60,9 @@ function PostAlbum({ album = defaultAlbum }) {
       <PostAlbumTitle>
         <h3>{title}</h3>
       </PostAlbumTitle>
-      <Album>
-        <PostAlbumWork photo={photos} />
-      </Album>
+      <AlbumStyle>
+        <AlbumSwiper photo={photos} />
+      </AlbumStyle>
     </>
   );
 }

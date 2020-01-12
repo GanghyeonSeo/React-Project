@@ -9,7 +9,7 @@ const defaultPhoto = {
   thumbnailUrl: null
 };
 
-const PostAlbumWork = ({ photo = defaultPhoto }) => {
+const AlbumSwiper = ({ photo = defaultPhoto }) => {
   const params = {
     spaceBetween: 10,
     slidesPerView: 7,
@@ -51,4 +51,4 @@ const PostAlbumWork = ({ photo = defaultPhoto }) => {
     </Swiper>
   );
 };
-export default PostAlbumWork;
+export default AlbumSwiper;

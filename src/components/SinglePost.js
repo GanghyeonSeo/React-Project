@@ -11,7 +11,7 @@ const TopBlock = styled.div`
   background: #f3f3f3;
 `;
 
-const DescriptionBlcok = styled.div`
+const DescriptionBlock = styled.div`
   margin: auto;
   width: 80vw;
   padding-top: 50px;
@@ -29,13 +29,13 @@ export default function SinglePost({ post }) {
     <>
       <TopBlock>
         <h1>{title}</h1>
-        <PostAlbum album={album} id={id} />
+        <PostAlbum album={album} />
       </TopBlock>
-      <DescriptionBlcok>
+      <DescriptionBlock>
         <p className="Description">Description</p>
         <p>{body}</p>
         <PostComments id={id} />
-      </DescriptionBlcok>
+      </DescriptionBlock>
     </>
   );
 }
